@@ -7,15 +7,15 @@ We are using it for our work-in-progress website version 2.0.
 
 Latest stable release is 0.1.0
 
-(Leiningen)[http://leiningen.org/] dependency information:
+[Leiningen](http://leiningen.org/) dependency information:
 
     [org.clojars.bepitulaz/midpress "0.1.0"]
 
-(Gradle)[http://www.gradle.org/] dependency information:
+[Gradle](http://www.gradle.org/) dependency information:
 
     compile "org.clojars.bepitulaz:midpress:0.1.0"
 
-(Maven)[http://maven.apache.org/] dependency information:
+[Maven](http://maven.apache.org/) dependency information:
 
     <dependency>
       <groupId>org.clojars.bepitulaz</groupId>
@@ -57,7 +57,7 @@ Get all categories:
     ;; get all registered categories
     (the-categories "http://yourdomain.com/wp-json")
 
-For the complete query string option, please refer to (WP-API.org)[http://wp-api.org].
+For the complete query string option, please refer to [WP-API.org](http://wp-api.org).
 
 ## License
 
