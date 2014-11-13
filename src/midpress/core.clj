@@ -1,5 +1,5 @@
-(ns wordpress-api-client.core
-  (:require [wordpress-api-client.utils :refer :all]))
+(ns midpress.core
+  (:require [midpress.utils :refer :all]))
 
 (defn the-loop
   [siteurl & [query]]

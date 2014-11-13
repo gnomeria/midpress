@@ -1,4 +1,4 @@
-(ns wordpress-api-client.client
+(ns midpress.client
   (:require [clj-http.client :as http]
             [clojure.data.json :as json]))
 

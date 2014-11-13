@@ -1,5 +1,5 @@
-(defproject wordpress-api-client "0.1.0"
-  :description "Wrapper for WP-API plugins."
+(defproject org.clojars.bepitulaz/midpress "0.1.0"
+  :description "Wrapper for WP-API WordPress plugins."
   :url "https://github.com/Midjournal/midpress"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}

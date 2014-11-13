@@ -1,5 +1,5 @@
-(ns wordpress-api-client.utils
-  (:require [wordpress-api-client.client :refer :all]))
+(ns midpress.utils
+  (:require [midpress.client :refer :all]))
 
 (defmacro call-wp-api
   "Write codes for doing a request to the server."
