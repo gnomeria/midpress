@@ -5,11 +5,10 @@ We are using it for our work-in-progress website version 2.0.
 
 ## Usage
 
-FIXME
+o_0
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Midjournal
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0.
