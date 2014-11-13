@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [wordpress-api-client.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest the-loop-test
+  (testing "Testing exception when site url isn't supplied."
+    (is (thrown? Exception (the-loop)))))
