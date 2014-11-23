@@ -9,6 +9,12 @@
     (call-wp-api {:siteurl url :uri "/posts" :query query})
     (catch clojure.lang.ExceptionInfo e (str (.getMessage e)))))
 
+(defn the-page
+  "Retrieve all registered pages." 
+  [{:keys [url query]}] 
+  (try
+    (call-wp-api {:siteurl url :uri "/pages" :query query})
+    (catch clojure.lang.ExceptionInfo e (str (.getMessage e)))))
 
 (defn the-single
   "Show single post by post id." 

@@ -1,4 +1,4 @@
-(defproject org.clojars.bepitulaz/midpress "0.2.0"
+(defproject org.clojars.bepitulaz/midpress "0.3.0"
   :description "Wrapper for WP-API WordPress plugins."
   :url "https://github.com/Midjournal/midpress"
   :license {:name "Eclipse Public License"

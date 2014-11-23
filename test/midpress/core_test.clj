@@ -20,6 +20,19 @@
     (is (let [response (the-loop {:url siteurl :query "?filter[posts_per_page]=2"})]
           (= 2 (count response))))))
 
+(deftest the-page-fail-test
+  (testing "Testing exception when site url isn't supplied."
+    (is (thrown? Exception (the-page {:uri "/pages" :query nil :username nil :password nil})))))
+
+(deftest the-page-404
+  (testing "Testing the routes is 404 not found."
+    (is (= "clj-http: status 404" (the-page {:url not-found-siteurl :query nil :username nil :password nil})))))
+
+(deftest the-page-success
+  (testing "Testing if the request is success."
+    (is (let [response (the-page {:url siteurl :query "?filter[pagename]=about"})]
+          (= "about" (:slug (first response)))))))
+
 (deftest the-single-fail-test
   (testing "Testing exception when site url isn't supplied."
     (is (thrown? Exception (the-single)))))

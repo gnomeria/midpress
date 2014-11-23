@@ -5,22 +5,22 @@ We are using it for our work-in-progress website version 2.0.
 
 ## Releases and Dependency Information
 
-Latest stable release is 0.2.0
+Latest stable release is 0.3.0
 
 [Leiningen](http://leiningen.org/) dependency information:
 
-    [org.clojars.bepitulaz/midpress "0.2.0"]
+    [org.clojars.bepitulaz/midpress "0.3.0"]
 
 [Gradle](http://www.gradle.org/) dependency information:
 
-    compile "org.clojars.bepitulaz:midpress:0.2.0"
+    compile "org.clojars.bepitulaz:midpress:0.3.0"
 
 [Maven](http://maven.apache.org/) dependency information:
 
     <dependency>
       <groupId>org.clojars.bepitulaz</groupId>
       <artifactId>midpress</artifactId>
-      <version>0.2.0</version>
+      <version>0.3.0</version>
     </dependency>
 
 ## Usage
@@ -38,6 +38,12 @@ Get recent posts:
     
     ;; you can also give query string to it
     (the-loop {:url "http://yourdomain.com/wp-json" :query "?filter[posts_per_page]=4&filter[category_name]=foodie"})
+
+Get the pages:
+    (the-page {:url "http://yourdomain.com/wp-json"})
+    
+    ;; you can also give query string to it
+    (the-page {:url "http://yourdomain.com/wp-json" :query "?filter[pagename]=about"})
 
 For the complete query string option, please refer to [WP-API.org](http://wp-api.org).
 
@@ -69,6 +75,8 @@ Get the users. You need to install [Basic Auth plugin](https://github.com/WP-API
     (the-users {:url "http://yourdomain.com/wp-json" :username "your-wp-username" :password "your-wp-password"})
 
 ## Changelog
+version 0.3.0: Adding pages retrieval function.
+
 version 0.2.0: Adding users retrieval function.
 
 ## License
