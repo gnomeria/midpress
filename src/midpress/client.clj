@@ -5,5 +5,5 @@
 (defn get-request
   [url options]
   "Conduct a GET request to the server."
-  (let [{:keys [status body]} (http/get url options)]
-    (json/read-str body :key-fn keyword)))
+  (let [{:keys [headers links body]} (http/get url options)]
+    {:links links :headers headers :body (json/read-str body :key-fn keyword)}))
