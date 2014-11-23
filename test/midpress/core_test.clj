@@ -18,7 +18,7 @@
 (deftest the-loop-success
   (testing "Testing if the request is success."
     (is (let [response (the-loop {:url siteurl :query "?filter[posts_per_page]=2"})]
-          (= 2 (count response))))))
+          (= 2 (count (:body response)))))))
 
 (deftest the-page-fail-test
   (testing "Testing exception when site url isn't supplied."
@@ -31,7 +31,7 @@
 (deftest the-page-success
   (testing "Testing if the request is success."
     (is (let [response (the-page {:url siteurl :query "?filter[pagename]=about"})]
-          (= "about" (:slug (first response)))))))
+          (= "about" (:slug (first (:body response))))))))
 
 (deftest the-single-fail-test
   (testing "Testing exception when site url isn't supplied."
@@ -44,7 +44,7 @@
 (deftest the-single-success
   (testing "Testing if the request is success."
     (is (let [response (the-single {:url siteurl :postid 2888})]
-          (contains? response :title)))))
+          (contains? (:body response) :title)))))
 
 (deftest the-taxonomies-fail-test
   (testing "Testing exception when site url isn't supplied."
@@ -57,12 +57,12 @@
 (deftest the-taxonomies-success
   (testing "Testing if the request is success."
     (is (let [response (the-taxonomies {:url siteurl :taxonomy "post_tag"})]
-          (= "post_tag" (:slug response))))))
+          (= "post_tag" (:slug (:body response)))))))
 
 (deftest the-list-all-taxonomies-success
   (testing "Testing if the request to list all taxonomies is success."
     (is (let [response (the-taxonomies {:url siteurl})]
-          (contains? (last response) :name)))))
+          (contains? (last (:body response)) :name)))))
 
 (deftest the-categories-fail-test
   (testing "Testing exception when site url isn't supplied."
@@ -75,7 +75,7 @@
 (deftest the-categories-success
   (testing "Testing if the request is success."
     (is (let [response (the-categories {:url siteurl})]
-          (contains? (last response) :ID)))))
+          (contains? (last (:body response)) :ID)))))
 
 (deftest the-users-fail-test
   (testing "Testing exception when site url isn't supplied to users endpoint."
@@ -88,6 +88,6 @@
 (deftest the-users-success
   (testing "Testing if the request is success to users endpoint."
     ;; Todo: it should fake for publishing it on Github
-    (is (let [response (the-users {:url siteurl :username "username" :password "password" :userid 1})]
-          (= 1 (:ID response))))))
+    (is (let [response (the-users {:url siteurl :username "midadmin" :password "midadmin!?" :userid 1})]
+          (= 1 (:ID (:body response)))))))
 

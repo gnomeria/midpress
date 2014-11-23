@@ -5,22 +5,22 @@ We are using it for our work-in-progress website version 2.0.
 
 ## Releases and Dependency Information
 
-Latest stable release is 0.3.0
+Latest stable release is 0.3.1
 
 [Leiningen](http://leiningen.org/) dependency information:
 
-    [org.clojars.bepitulaz/midpress "0.3.0"]
+    [org.clojars.bepitulaz/midpress "0.3.1"]
 
 [Gradle](http://www.gradle.org/) dependency information:
 
-    compile "org.clojars.bepitulaz:midpress:0.3.0"
+    compile "org.clojars.bepitulaz:midpress:0.3.1"
 
 [Maven](http://maven.apache.org/) dependency information:
 
     <dependency>
       <groupId>org.clojars.bepitulaz</groupId>
       <artifactId>midpress</artifactId>
-      <version>0.3.0</version>
+      <version>0.3.1</version>
     </dependency>
 
 ## Usage
@@ -75,6 +75,9 @@ Get the users. You need to install [Basic Auth plugin](https://github.com/WP-API
     (the-users {:url "http://yourdomain.com/wp-json" :username "your-wp-username" :password "your-wp-password"})
 
 ## Changelog
+
+version 0.3.1: Displaying headers and links for pagination purpose to the response.
+
 version 0.3.0: Adding pages retrieval function.
 
 version 0.2.0: Adding users retrieval function.
