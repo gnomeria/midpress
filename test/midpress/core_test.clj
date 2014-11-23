@@ -88,6 +88,6 @@
 (deftest the-users-success
   (testing "Testing if the request is success to users endpoint."
     ;; Todo: it should fake for publishing it on Github
-    (is (let [response (the-users {:url siteurl :username "midadmin" :password "midadmin!?" :userid 1})]
+    (is (let [response (the-users {:url siteurl :username "username" :password "password" :userid 1})]
           (= 1 (:ID (:body response)))))))
 
